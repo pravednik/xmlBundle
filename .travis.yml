@@ -22,11 +22,9 @@ matrix:
       env: SYMFONY_VERSION='dev-master symfony/debug:~2.6@dev symfony/http-kernel:~2.6@dev'
 
 before_script:
-  - composer self-update
-  - composer require symfony/framework-bundle:${SYMFONY_VERSION} --no-update
-  - composer update --prefer-source
-
-script: phpunit --coverage-text
+  - wget http://getcomposer.org/composer.phar
+  - php composer.phar install
+  - phpunit --configuration phpunit.xml.dist --coverage-text /Tests
 
 notifications:
   email:
