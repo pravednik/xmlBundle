@@ -6,7 +6,7 @@ Status](https://travis-ci.org/pravednik/xmlWrapperBundle.png?branch=master)](htt
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/ac3fa776-bc19-4fd7-99f0-a0466c1b0bd3/mini.png)](https://insight.sensiolabs.com/projects/ac3fa776-bc19-4fd7-99f0-a0466c1b0bd3)
 [![Latest Stable Version](https://poser.pugx.org/desperado/xml-bundle/v/stable.svg)](https://packagist.org/packages/desperado/xml-bundle)
 [![License](https://poser.pugx.org/desperado/xml-bundle/license.svg)](https://packagist.org/packages/desperado/xml-bundle)
-[![Total Downloads](https://poser.pugx.org/leaphly/cart-bundle/downloads.svg)](https://packagist.org/packages/leaphly/cart-bundle)
+[![Total Downloads](https://poser.pugx.org/desperado/xml-bundle/downloads.svg)](https://packagist.org/packages/desperado/xml-bundle)
 
 XML Builder/Reader Bundle for Symfony2
 
