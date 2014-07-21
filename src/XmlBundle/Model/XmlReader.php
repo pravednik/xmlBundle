@@ -22,7 +22,7 @@ class XmlReader
 {
 
     /**
-     * Конвертация XML в массив
+     * Convert XML to PHP array
      *
      * @param string $xmlString
      *
@@ -43,7 +43,7 @@ class XmlReader
     }
 
     /**
-     * Конвертация XML в массив
+     * Convert XML to PHP array
      *
      * @param SimpleXmlIterator $iterator
      *
@@ -61,7 +61,7 @@ class XmlReader
                 {
                     if(1 <= $value->count())
                     {
-                        $result[$iterator->key()][][$key] = $this->getArrayFromXml( $value );
+                        $result[$iterator->key()][$key] = $this->getArrayFromXml($value);
                     }
                     else
                     {
@@ -71,14 +71,14 @@ class XmlReader
                         }
                         else
                         {
-                            $result[$iterator->key()] = $this->getArrayFromXml($iterator->current()  );
+                            $result[$iterator->key()] = $this->getArrayFromXml($iterator->current());
                         }
                     }
                 }
             }
             else
             {
-                $result[$iterator->key()] = $this->convertToStringOrBoolean($iterator->current() );
+                $result[$iterator->key()] = $this->convertToStringOrBoolean($iterator->current());
             }
         }
 
