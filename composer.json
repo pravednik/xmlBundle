@@ -1,0 +1,26 @@
+{
+    "name": "desperado/xml-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony XmlBundle",
+    "keywords": ["XML Generator", "Xml Reader", "Xml Formatter"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Desperado",
+            "email": "desperado@minsk-info.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Desperado\\": "/src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.*"
+        }
+    }
+}
