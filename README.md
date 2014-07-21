@@ -1,6 +1,8 @@
 xml_wrapper_bundle
 ==================
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/ac3fa776-bc19-4fd7-99f0-a0466c1b0bd3/big.png)](https://insight.sensiolabs.com/projects/ac3fa776-bc19-4fd7-99f0-a0466c1b0bd3)
+
 XML Builder/Reader Bundle for Symfony2
 
 ## Installation
