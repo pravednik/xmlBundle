@@ -54,6 +54,6 @@ class XmlReaderTest extends \PHPUnit_Framework_TestCase
 
         $this->assertNotEmpty($resultArray);
         $this->assertTrue(is_array($resultArray));
-        $this->assertTrue($resultArray === $expectedArray);
+        $this->assertEquals($resultArray, $expectedArray);
     }
 }

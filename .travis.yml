@@ -24,4 +24,4 @@ notifications:
   email:
     - desperado@minsk-info.ru
 
-script: ./vendor/bin/phpunit --coverage-text
+script: ./vendor/bin/phpunit --bootstrap ./Tests/bootstrap.php --configuration ./phpunit.xml.dist  --coverage-text

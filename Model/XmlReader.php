@@ -61,7 +61,7 @@ class XmlReader
                 {
                     if(1 <= $value->count())
                     {
-                        $result[$iterator->key()][$key] = $this->getArrayFromXml($value);
+                        $result[$iterator->key()][][$key] = $this->getArrayFromXml($value);
                     }
                     else
                     {
