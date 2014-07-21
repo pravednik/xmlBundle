@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="desperado_xml.model.xml_abstract.class">Desperado\XmlBundle\Model\XmlAbstract</parameter>
+        <parameter key="desperado_xml.model.xml_editor.class">Desperado\XmlBundle\Model\XmlEditor</parameter>
+        <parameter key="desperado_xml.model.xml_generator.class">Desperado\XmlBundle\Model\XmlGenerator</parameter>
+        <parameter key="desperado_xml.model.xml_reader.class">Desperado\XmlBundle\Model\XmlReader</parameter>
+        <parameter key="desperado_xml.model.xml_prepare.class">Desperado\XmlBundle\Model\XmlPrepare</parameter>
+        <parameter key="desperado_xml.disable_entity_loader" type="string">true</parameter>
+        <parameter key="desperado_xml.use_internal_errors" type="string">true</parameter>
+    </parameters>
+
+    <services>
+
+        <!-- XmlAbstract -->
+        <service id="desperado_xml.model.xml_abstract"
+                 class="%desperado_xml.model.xml_abstract.class%"
+                 public="false"
+                 abstract="true">
+
+            <argument>%desperado_xml.disable_entity_loader%</argument>
+            <argument>%desperado_xml.use_internal_errors%</argument>
+
+        </service>
+
+        <!-- XmlEditor -->
+        <service id="desperado_xml.model.xml_editor"
+                 class="%desperado_xml.model.xml_editor.class%"
+                 parent="desperado_xml.model.xml_abstract"
+                 public="true"/>
+
+        <!-- XmlGenerator -->
+        <service id="desperado_xml.model.xml_generator"
+                 class="%desperado_xml.model.xml_generator.class%"
+                 parent="desperado_xml.model.xml_abstract"
+                 public="true"/>
+
+        <!-- XmlReader -->
+        <service id="desperado_xml.model.xml_reader"
+                 class="%desperado_xml.model.xml_reader.class%"
+                 parent="desperado_xml.model.xml_abstract"
+                 public="true"/>
+
+        <!-- XmlPrepare -->
+        <service id="desperado_xml.model.xml_prepare"
+                 class="%desperado_xml.model.xml_prepare.class%"
+                 parent="desperado_xml.model.xml_abstract"
+                 public="true"/>
+
+    </services>
+
+</container>
