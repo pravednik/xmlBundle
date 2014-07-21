@@ -26,16 +26,18 @@ Add `desperado/xml-bundle` to your composer.json file.
 
 ### DIC
 
-XmlEditor: desperado_xml.model.xml_editor
-XmlGenerator: desperado_xml.model.xml_generator
-XmlReader: desperado_xml.model.xml_reader
-XmlPrepare: desperado_xml.model.xml_prepare
+* XmlEditor: desperado_xml.model.xml_editor
+* XmlGenerator: desperado_xml.model.xml_generator
+* XmlReader: desperado_xml.model.xml_reader
+* XmlPrepare: desperado_xml.model.xml_prepare
 
 ### Config options
 
+```yml
 desperado_xml:
     disable_entity_loader: true (default: true)
     use_internal_errors: true (default: true)
+```
 
 ### Create xml from array
 
