@@ -12,14 +12,7 @@ Add `desperado/xml-bundle` to your composer.json file.
 ```js
      "require": {
 	     "desperado/xml-bundle": "dev-master"
-     },
-     "repositories": [
-         {
-             "type": "git",
-             "url": "https://github.com/pravednik/xml_wrapper_bundle.git",
-             "trunk-path": "src"
-         }
-     ]
+     }
 ```
 
 ## Usage
