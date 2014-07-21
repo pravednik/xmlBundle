@@ -11,7 +11,7 @@ Add `desperado/xml-bundle` to your composer.json file.
 
 ```js
      "require": {
-	     "desperado/xml-bundle": "v0.1.*"
+	     "desperado/xml-bundle": "dev-master"
      },
      "repositories": [
          {
