@@ -11,6 +11,10 @@ env:
   - SYMFONY_VERSION=2.4.*
   - SYMFONY_VERSION=dev-master
 
+matrix:
+    allow_failures:
+        - php: hhvm
+
 before_script:
   - composer self-update
   - composer require symfony/symfony:${SYMFONY_VERSION} --no-update
@@ -20,4 +24,4 @@ notifications:
   email:
     - desperado@minsk-info.ru
 
-script: phpunit -c /Tests
+script: ./vendor/bin/phpunit --coverage-text
