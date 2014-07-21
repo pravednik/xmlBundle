@@ -1,10 +1,13 @@
 <?php
 
-if(!is_file($autoloadFile = __DIR__ . '/../vendor/autoload.php'))
+if(!file_exists(dirname(__DIR__) . '/composer.lock'))
 {
-    echo 'Could not find "vendor/autoload.php". Did you forget to run "composer install --dev"?' . PHP_EOL;
-
-    exit(1);
+    die(
+        "Dependencies must be installed using composer: php composer.phar install --dev"
+        . PHP_EOL
+        . "See http://getcomposer.org for help with installing composer"
+        . PHP_EOL
+    );
 }
 
-require_once $autoloadFile;
+$autoloader = require_once(dirname(__DIR__) . '/vendor/autoload.php');
