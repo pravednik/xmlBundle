@@ -20,4 +20,4 @@ notifications:
   email:
     - desperado@minsk-info.ru
 
-script: phpunit --coverage-text
+script: phpunit -c /Tests
