@@ -5,6 +5,7 @@ xml_wrapper_bundle
 [![Build
 Status](https://https://travis-ci.org/pravednik/xmlWrapperBundle.png?branch=master)](https://https://travis-ci.org/pravednik/xmlWrapperBundle)
 [![Latest Stable Version](https://poser.pugx.org/desperado/xml-bundle/v/stable.svg)](https://packagist.org/packages/desperado/xml-bundle)
+[![License](https://poser.pugx.org/desperado/xml-bundle/license.svg)](https://packagist.org/packages/desperado/xml-bundle)
 
 XML Builder/Reader Bundle for Symfony2
 
