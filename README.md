@@ -22,6 +22,20 @@ Add `desperado/xml-bundle` to your composer.json file.
      }
 ```
 
+The next thing you should do is install the bundle by executing the following command:
+
+    php composer.phar update desperado/xml-bundle
+
+Finally, add the bundle to the registerBundles function of the AppKernel class in the _app/AppKernel.php_ file:
+
+    public function registerBundles()
+    {
+        $bundles = array(
+            ...
+            new Desperado\XmlBundle\DesperadoXmlBundle,
+            ...
+        );
+
 ## Usage
 
 ### DIC
