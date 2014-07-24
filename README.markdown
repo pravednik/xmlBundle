@@ -18,7 +18,6 @@ Add `desperado/xml-bundle` to your composer.json file.
 	     "desperado/xml-bundle": "dev-master"
      }
 ```
-
 The next thing you should do is install the bundle by executing the following command:
 
     php composer.phar update desperado/xml-bundle
