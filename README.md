@@ -1,5 +1,5 @@
 [![Build
-Status](https://travis-ci.org/pravednik/xmlWrapperBundle.png?branch=master)](https://travis-ci.org/pravednik/xmlWrapperBundle)
+Status](https://travis-ci.org/pravednik/xmlBundle.png?branch=master)](https://travis-ci.org/pravednik/xmlBundle)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/ac3fa776-bc19-4fd7-99f0-a0466c1b0bd3/mini.png)](https://insight.sensiolabs.com/projects/ac3fa776-bc19-4fd7-99f0-a0466c1b0bd3)
 [![Latest Stable Version](https://poser.pugx.org/desperado/xml-bundle/v/stable.svg)](https://packagist.org/packages/desperado/xml-bundle)
 [![License](https://poser.pugx.org/desperado/xml-bundle/license.svg)](https://packagist.org/packages/desperado/xml-bundle)
