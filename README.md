@@ -53,6 +53,9 @@ desperado_xml:
 
 ```php
 <?php
+
+use Desperado\XmlBundle\Model\XmlGenerator;
+
 $params = [
             'Request' => [
                 '@ns'               => [
@@ -97,6 +100,10 @@ prints:
 
 ```php
 <?php
+
+use Desperado\XmlBundle\Model\XmlPrepare;
+use Desperado\XmlBundle\Model\XmlGenerator;
+
         $params = [
             'Details' => [
                 'PaymentParameters' => [
@@ -130,6 +137,9 @@ prints:
 
 ```php
 <?php
+
+use Desperado\XmlBundle\Model\XmlReader;
+
         $xmlString = '<?xml version="1.0" encoding="UTF-8"?>
                       request>
                           <Details>
