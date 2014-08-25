@@ -141,7 +141,7 @@ prints:
 use Desperado\XmlBundle\Model\XmlReader;
 
         $xmlString = '<?xml version="1.0" encoding="UTF-8"?>
-                      request>
+                      <request>
                           <Details>
                               <PaymentParameters>
                                   <first_node>first_node_value</first_node>
