@@ -30,17 +30,6 @@ abstract class XmlAbstract
     protected $useInternalErrors;
 
     /**
-     * @param boolean $disableEntityLoader Disable external entities loading
-     * @param boolean $useInternalErrors   Disables libxml internal errors handling and allows user to fetch error information as needed
-     */
-    public function __construct($disableEntityLoader = false, $useInternalErrors = true)
-    {
-        $this
-            ->setDisableEntityLoader($disableEntityLoader)
-            ->setUseInternalErrors($useInternalErrors);
-    }
-
-    /**
      * Disable external entities loading
      *
      * @param boolean $disableEntityLoaderFlag
