@@ -1,29 +1,33 @@
 {
-    "name": "desperado/xml-bundle",
-    "type": "symfony-bundle",
-    "description": "Symfony XmlBundle",
-    "keywords": ["XML Generator", "Xml Reader", "Xml Formatter"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Desperado",
-            "email": "desperado@minsk-info.ru"
-        }
-    ],
-    "require": {
-        "php": ">=5.4.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "3.7.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Desperado\\XmlBundle\\": ""
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "0.1.*"
-        }
+  "name": "desperado/xml-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony XmlBundle",
+  "keywords": [
+    "XML Generator",
+    "Xml Reader",
+    "Xml Formatter"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Desperado",
+      "email": "desperado@minsk-info.ru"
     }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Desperado\\XmlBundle\\": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    }
+  }
 }
