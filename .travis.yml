@@ -6,7 +6,8 @@ php:
 
 env:
   - SYMFONY_VERSION=2.4.*
-  - SYMFONY_VERSION=dev-master
+  - SYMFONY_VERSION=2.5.*
+  - SYMFONY_VERSION=2.6.*
 
 matrix:
     allow_failures:
