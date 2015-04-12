@@ -32,6 +32,8 @@ abstract class XmlAbstract
     /**
      * Disable external entities loading
      *
+     * @deprecated
+     *
      * @param boolean $disableEntityLoaderFlag
      *
      * @return $this
@@ -47,6 +49,8 @@ abstract class XmlAbstract
 
     /**
      * Disables libxml internal errors handling and allows user to fetch error information as needed
+     *
+     * @deprecated
      *
      * @param boolean $useInternalErrorsFlag
      *
@@ -64,6 +68,8 @@ abstract class XmlAbstract
     /**
      * Gets if external enties are being loaded
      *
+     * @deprecated
+     *
      * @return boolean
      */
     public function getDisableEntityLoader()
@@ -73,6 +79,8 @@ abstract class XmlAbstract
 
     /**
      * Gets LibXML errors handling mode (internal or user)
+     *
+     * @deprecated
      *
      * @return boolean
      */
@@ -94,7 +102,7 @@ abstract class XmlAbstract
 
         $simpleXml = simplexml_load_string($xmlString);
 
-        $this->setUseInternalErrors($previousValue);
+        libxml_use_internal_errors($previousValue);
 
         return false !== $simpleXml;
     }

@@ -25,13 +25,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder;
-        $treeBuilder
-            ->root('desperado_xml')
-                ->children()
-                    ->booleanNode('disable_entity_loader')->defaultTrue()->end()
-                    ->booleanNode('use_internal_errors')->defaultTrue()->end()
-                ->end()
-            ->end();
+        $treeBuilder->root('desperado_xml');
 
         return $treeBuilder;
     }

@@ -8,7 +8,6 @@
 
 namespace Desperado\XmlBundle\Model;
 
-use DOMDocument;
 use Desperado\XmlBundle\Exceptions\InvalidArgumentException;
 
 /**
@@ -50,7 +49,7 @@ class XmlEditor
     {
         if(true === $this->isXml($xmlString))
         {
-            $dom = new DOMDocument;
+            $dom = new \DOMDocument;
             $dom->preserveWhiteSpace = false;
             $dom->loadXML($xmlString);
             $dom->formatOutput = true;

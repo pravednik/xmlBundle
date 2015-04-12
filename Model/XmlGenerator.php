@@ -8,8 +8,6 @@
 
 namespace Desperado\XmlBundle\Model;
 
-use DOMDocument;
-use DOMElement;
 use Desperado\XmlBundle\Exceptions\InvalidArgumentException;
 
 /**
@@ -112,7 +110,7 @@ class XmlGenerator
      */
     protected $formatOutputFlag = true;
 
-    /** @var null|DomDocument */
+    /** @var null|\DomDocument */
     protected $domDocument;
 
     /**
@@ -225,7 +223,7 @@ class XmlGenerator
      * @param string       $element The child's name
      * @param string|array $data    Element value
      *
-     * @return DOMElement
+     * @return \DOMElement
      *
      * @throws InvalidArgumentException
      */
@@ -234,14 +232,14 @@ class XmlGenerator
         $this->prepareElementName($element);
 
         /** setRootName(null) support */
-        if(empty($element))
+        if('' === (string) $element)
         {
             $element = array_keys($data)[0];
 
             return $this->processGenerate($element, $data[$element]);
         }
 
-        /** @var DOMElement $node */
+        /** @var \DOMElement $node */
         $node = $this->getDomDocument()->createElement($element);
 
         if(is_array($data))
@@ -254,7 +252,7 @@ class XmlGenerator
 
                 return $node;
             }
-            else if(isset($data['@cdata']))
+            elseif(isset($data['@cdata']))
             {
                 $this->applyCData($data, $node);
 
@@ -308,8 +306,8 @@ class XmlGenerator
     /**
      * Adding Namespaces
      *
-     * @param array      $data
-     * @param DOMElement $node
+     * @param array       $data
+     * @param \DOMElement $node
      *
      * @return void
      */
@@ -320,7 +318,7 @@ class XmlGenerator
             $nsUrl = !empty($nsDetails['uri']) ? $nsDetails['uri'] : '';
             $nsQualifiedName = !empty($nsDetails['prefix']) ? $nsDetails['prefix'] : '';
             $nsContent = !empty($nsDetails['content']) ? $nsDetails['content'] : '';
-            $prefixName = !empty($nsQualifiedName) ? $nsQualifiedName . ':' . $namespace : $namespace;
+            $prefixName = '' !== (string) $nsQualifiedName ? $nsQualifiedName . ':' . $namespace : $namespace;
 
             $node->setAttributeNS($nsUrl, $prefixName, $nsContent);
         }
@@ -331,8 +329,8 @@ class XmlGenerator
     /**
      * Adding cdata
      *
-     * @param array      $data
-     * @param DOMElement $node
+     * @param array       $data
+     * @param \DOMElement $node
      *
      * @return void
      */
@@ -350,8 +348,8 @@ class XmlGenerator
     /**
      * Adding element value
      *
-     * @param array      $data
-     * @param DOMElement $node
+     * @param array       $data
+     * @param \DOMElement $node
      *
      * @return void
      */
@@ -374,8 +372,8 @@ class XmlGenerator
     /**
      * Adding attributes
      *
-     * @param array      $data
-     * @param DOMElement $node
+     * @param array       $data
+     * @param \DOMElement $node
      *
      * @return void
      *
@@ -425,13 +423,13 @@ class XmlGenerator
     /**
      * Gets DomDocument object
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     protected function getDomDocument()
     {
         if(null === $this->domDocument)
         {
-            $this->domDocument = new DOMDocument($this->getVersion(), $this->getEncoding());
+            $this->domDocument = new \DOMDocument($this->getVersion(), $this->getEncoding());
             $this->domDocument->formatOutput = $this->formatOutputFlag;
         }
 

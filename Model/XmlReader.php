@@ -94,7 +94,7 @@ class XmlReader
      */
     protected function convertToStringOrBoolean($string)
     {
-        $result = strval($string);
+        $result = (string) $string;
         $lowerString = strtolower($result);
 
         if('true' === $lowerString)

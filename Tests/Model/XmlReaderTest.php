@@ -41,11 +41,11 @@ class XmlReaderTest extends \PHPUnit_Framework_TestCase
                         'title'  => 'Osmp-Russian',
                         'params' => [
                             'account' => 'WTF?!',
-                            'active'  => true,
-                        ],
-                    ],
-                ],
-            ],
+                            'active'  => true
+                        ]
+                    ]
+                ]
+            ]
         ];
 
         $object = new XmlReader;

@@ -47,7 +47,7 @@ class XmlPrepare
         $iterator = new RecursiveArrayIterator($data);
         $this->arrayWalk($iterator, $result, '');
 
-        return !empty($primaryKey) ? [$primaryKey => $result] : $result;
+        return '' !== (string) $primaryKey ? [$primaryKey => $result] : $result;
     }
 
     /**
@@ -69,7 +69,7 @@ class XmlPrepare
                 }
                 else
                 {
-                    if(!is_numeric($iterator->key()) && is_string($iterator->key()) && '' !== $primaryKey)
+                    if('' !== $primaryKey && false === is_numeric($iterator->key()) && is_string($iterator->key()))
                     {
                         $this->arrayWalk($iterator->getChildren(), $result, $iterator->key());
                     }
@@ -81,7 +81,7 @@ class XmlPrepare
             }
             else
             {
-                if(empty($primaryKey))
+                if('' !== (string) $primaryKey)
                 {
                     $result[$iterator->key()] = ['@value' => $iterator->current()];
                 }

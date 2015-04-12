@@ -20,12 +20,7 @@
         <service id="desperado_xml.model.xml_abstract"
                  class="%desperado_xml.model.xml_abstract.class%"
                  public="false"
-                 abstract="true">
-
-            <argument>%desperado_xml.disable_entity_loader%</argument>
-            <argument>%desperado_xml.use_internal_errors%</argument>
-
-        </service>
+                 abstract="true"/>
 
         <!-- XmlEditor -->
         <service id="desperado_xml.model.xml_editor"

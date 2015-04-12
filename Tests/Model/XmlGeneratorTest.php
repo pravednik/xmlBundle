@@ -78,7 +78,7 @@ class XmlGeneratorTest extends \PHPUnit_Framework_TestCase
                         'params'  => [
                             'account' => [
                                 '@attrib' => ['exist' => 0],
-                                '@cdata'  => 'WTF?!',
+                                '@cdata'  => 'WTF?!'
                             ],
                             'active'  => ['@value' => true]
                         ]
@@ -118,7 +118,7 @@ class XmlGeneratorTest extends \PHPUnit_Framework_TestCase
                         'params'  => [
                             'account' => [
                                 '@attrib' => ['exist' => 0],
-                                '@value'  => 'WTF?!',
+                                '@value'  => 'WTF?!'
                             ],
                             'active'  => ['@value' => true]
                         ]
@@ -160,7 +160,7 @@ class XmlGeneratorTest extends \PHPUnit_Framework_TestCase
                         'params'  => [
                             'account' => [
                                 '@attrib' => ['exist' => 0],
-                                '@value'  => 'WTF?!',
+                                '@value'  => 'WTF?!'
                             ],
                             'active'  => ['@value' => []]
                         ]
