@@ -43,4 +43,4 @@ trait XmlGeneratorAwareTrait
     {
         return $this->xmlGenerator;
     }
-} 
+}

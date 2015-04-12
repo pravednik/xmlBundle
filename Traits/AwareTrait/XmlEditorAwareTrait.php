@@ -43,4 +43,4 @@ trait XmlEditorAwareTrait
     {
         return $this->xmlEditor;
     }
-} 
+}

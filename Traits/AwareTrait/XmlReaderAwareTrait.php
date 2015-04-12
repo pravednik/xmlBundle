@@ -43,4 +43,4 @@ trait XmlReaderAwareTrait
     {
         return $this->xmlReader;
     }
-} 
+}

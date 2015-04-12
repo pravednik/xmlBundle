@@ -43,4 +43,4 @@ trait XmlPrepareAwareTrait
     {
         return $this->xmlPrepare;
     }
-} 
+}

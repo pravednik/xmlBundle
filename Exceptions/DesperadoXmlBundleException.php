@@ -18,4 +18,4 @@ use Exception;
 class DesperadoXmlBundleException extends Exception
 {
 
-} 
+}

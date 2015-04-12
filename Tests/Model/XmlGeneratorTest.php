@@ -172,4 +172,4 @@ class XmlGeneratorTest extends \PHPUnit_Framework_TestCase
         $object = new XmlGenerator;
         $object->generateFromArray($array);
     }
-} 
+}

@@ -16,4 +16,4 @@ namespace Desperado\XmlBundle\Exceptions;
 class InvalidArgumentException extends DesperadoXmlBundleException
 {
 
-} 
+}
