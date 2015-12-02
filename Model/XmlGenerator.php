@@ -113,17 +113,16 @@ class XmlGenerator
     /** @var null|\DomDocument */
     protected $domDocument;
 
-    /**
-     * @var string
-     */
-    protected $piNode = '';
-
+    /** @var string */
+    protected $piNode = [];
 
     /**
      * @param array $data
+     *
      * @return $this
      */
-    public function setPiNode(array $data) {
+    public function setPiNode(array $data)
+    {
 
         $this->piNode = $data;
 
@@ -131,7 +130,7 @@ class XmlGenerator
     }
 
     /**
-     * @return string
+     * @return array
      */
     public function getPiNode()
     {
@@ -246,10 +245,14 @@ class XmlGenerator
     /**
      * Creates new PI node
      */
-    protected function createPiNode() {
+    protected function createPiNode()
+    {
         $piNode = $this->getPiNode();
-        if (!empty($piNode)) {
-            foreach ($piNode as $target => $data) {
+
+        if(0 !== count($piNode))
+        {
+            foreach($piNode as $target => $data)
+            {
                 $xslt = $this->getDomDocument()->createProcessingInstruction($target, $data);
                 $this->getDomDocument()->appendChild($xslt);
             }
