@@ -114,6 +114,31 @@ class XmlGenerator
     protected $domDocument;
 
     /**
+     * @var string
+     */
+    protected $piNode = '';
+
+
+    /**
+     * @param array $data
+     * @return $this
+     */
+    public function setPiNode(array $data) {
+
+        $this->piNode = $data;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPiNode()
+    {
+        return $this->piNode;
+    }
+
+    /**
      * Set XML charset
      *
      * @param string $encoding
@@ -209,12 +234,26 @@ class XmlGenerator
     public function generateFromArray(array $data)
     {
         $xml = $this->processGenerate($this->rootName, $data);
+        $this->createPiNode();
         $this->getDomDocument()->appendChild($xml);
         $xml = $this->getDomDocument()->saveXML();
 
         $this->flush();
 
         return $xml;
+    }
+
+    /**
+     * Creates new PI node
+     */
+    protected function createPiNode() {
+        $piNode = $this->getPiNode();
+        if (!empty($piNode)) {
+            foreach ($piNode as $target => $data) {
+                $xslt = $this->getDomDocument()->createProcessingInstruction($target, $data);
+                $this->getDomDocument()->appendChild($xslt);
+            }
+        }
     }
 
     /**
