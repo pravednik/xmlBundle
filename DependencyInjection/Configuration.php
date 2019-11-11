@@ -24,8 +24,8 @@ class Configuration implements ConfigurationInterface
     /** {@inheritDoc} */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder;
-        $treeBuilder->root('desperado_xml');
+        $treeBuilder = new TreeBuilder('desperado_xml');
+        $rootNode = method_exists(TreeBuilder::class, 'getRootNode') ? $treeBuilder->getRootNode() : $treeBuilder->root('desperado_xml');
 
         return $treeBuilder;
     }
