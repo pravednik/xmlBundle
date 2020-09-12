@@ -31,16 +31,13 @@ class XmlReader
     public function processConvert($xmlString)
     {
         $result = [];
-        $entity_load = libxml_disable_entity_loader(true);
-        $errors = libxml_use_internal_errors(true);
+        libxml_disable_entity_loader(true);
 
         if(true === $this->isXml($xmlString))
         {
             $iterator = new SimpleXmlIterator($xmlString);
 
             $result = @$this->getArrayFromXml($iterator);
-            libxml_disable_entity_loader($entity_load);
-            libxml_use_internal_errors($errors);
         }
         return $result;
     }
