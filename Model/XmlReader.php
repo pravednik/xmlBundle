@@ -37,7 +37,7 @@ class XmlReader
         {
             $iterator = new SimpleXmlIterator($xmlString);
 
-            $result = @$this->getArrayFromXml($iterator);
+            $result = $this->getArrayFromXml($iterator);
         }
         return $result;
     }
