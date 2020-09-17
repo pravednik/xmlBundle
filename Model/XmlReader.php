@@ -31,6 +31,7 @@ class XmlReader
     public function processConvert($xmlString)
     {
         $result = [];
+        libxml_disable_entity_loader(true);
 
         if(true === $this->isXml($xmlString))
         {
@@ -38,7 +39,6 @@ class XmlReader
 
             $result = $this->getArrayFromXml($iterator);
         }
-
         return $result;
     }
 
